@@ -1,0 +1,70 @@
+{
+	"name": "Douglas Odell",
+	"byline": "User experience-driven front-end web developer, technology strategist, and team leader",
+	"experience": {
+		"professional": {
+			"id": "ep",
+			"title": "Professional Experience",
+			"entries": [
+				{
+					"id": "ep001",
+					"title": "Front End Application Developer",
+					"company": "Commonwealth Financial Network",
+					"location": "Waltham, MA",
+					"startDate": "2021-10-19",
+					"endDate": null,
+					"accomplishments": [
+						"Developed intuitive, responsive, and maintainable web apps using modern JavaScript libraries and coding practices in an Agile/SCRUM environment",
+						"Created shared React component library for front-end assets to enable UI consistency across various apps and websites",
+						"Migrated corporate website from legacy .NET app to CMS-supported prospecting tool using Contentful, Netlify, and GatsbyJS",
+						"Implemented closed-loop analytics between custom web apps and Hubspot properties using Google Analytics and Hubspot CRM",
+						"Contributed to design and development of networking app for financial professionals to connect based on common interests using React",
+						"Enhanced user experience for CMS platforms including Contentful, OpenText WMS, and SharePoint Online"
+					]
+				},
+				{
+					"id": "ep002",
+					"title": "Freelance Web Developer/Designer",
+					"company": null,
+					"location": null,
+					"startDate": "2013-01-01",
+					"endDate": null,
+					"accomplishments": [
+						"Designed and developed CMS-supported brochure websites for small businesses using Wordpress, Wix, and Squarespace",
+						"Consulted on user experience, design, and implementation for small business websites"
+					]
+				},
+				{
+					"id": "ep003",
+					"title": "Supervisor, Web Services & Usability",
+					"company": "Commonwealth Financial Network",
+					"location": "Waltham, MA",
+					"startDate": "2016-08-19",
+					"endDate": "2019-08-19",
+					"accomplishments": [
+						"Led website development and maintenance strategy for client portal, employee intranet, and corporate website",
+						"Managed, mentored, hired, and professionally supported team of front-end developers",
+						"Supported team through corporate restructuring, rebuilding the team while ensuring ongoing support of websites and applications",
+						"Coordinated work for a high-volume Kanban queue and long-term Agile/SCRUM project pipeline",
+						"Consulted on UX for intranet and HRIS replacement projects"
+					]
+				},
+				{
+					"id": "ep003",
+					"title": "Web Production Specialist",
+					"company": "Commonwealth Financial Network",
+					"location": "Waltham, MA",
+					"startDate": "2013-08-19",
+					"endDate": "2016-08-19",
+					"accomplishments": [
+						"Administered content updates for client portal, employee intranet, employee directory and corporate website",
+						"Provided indispensable customer service to internal clients through a high-volume web request queue (ServiceNow)",
+						"Collaborated with business to find creative solutions to improve website engagement, incorporating UX and development best practices",
+						"Migrated frequently-updated static websites into CMS to enable self-serve maintenance for content authors",
+						"Developed front-end interfaces for web tools and applications with usability and coding best practices"
+					]
+				}
+			]
+		}
+	}
+}
