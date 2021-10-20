@@ -3,6 +3,7 @@ import { CookiesProvider, useCookies } from 'react-cookie';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from 'styled-components';
 import * as Styled from './App.styles.js';
+import Job from './components/Job';
 import resume from './data/resume.json';
 import useSelectedTheme from './hooks/useSelectedTheme';
 
@@ -33,33 +34,26 @@ function App() {
                 <section>
                   <h2>{experience.professional.title}</h2>
                   {experience.professional.entries.map(
-                    ({ id, title, accomplishments }) => {
+                    ( entry ) => {
                       return (
-                        <div key={id}>
-                          <h3>{title}</h3>
-                          <ul>
-                            {accomplishments.map(
-                              (accomplishment, i) => {
-                                return (
-                                  <li key={`${id}${i}`}>
-                                    {accomplishment}
-                                  </li>
-                                );
-                              }
-                            )}
-                          </ul>
-                        </div>
+                        <Job details={entry} key={entry.id} />
                       );
                     }
                   )}
                 </section>
+              </Styled.Main>
+              <Styled.Sidebar>
                 <button
                   type="button"
                   onClick={toggleSelectedTheme}
                 >
                   Toggle Theme
                 </button>
-              </Styled.Main>
+                meesa sidebar
+              </Styled.Sidebar>
+              <Styled.Footer>
+                Footer
+              </Styled.Footer>
             </Styled.App>
           </ThemeProvider>
         )}

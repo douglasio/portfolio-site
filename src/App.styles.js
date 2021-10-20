@@ -2,9 +2,11 @@ import styled, {
   createGlobalStyle,
 } from 'styled-components';
 
+const bodyPadding = `3rem`;
+
 export const GlobalStyle = createGlobalStyle`
-    html, body {
-        font-size: 16px;
+    :root, body {
+        font-size: 18px;
     }
 
     body { 
@@ -13,35 +15,76 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         color: ${({ theme }) => theme.body.paragraph};
         font-family: 'Source Sans Pro', sans-serif;
-        padding: 2rem 5rem;
+        font-size: 1rem;
+        font-weight: 400;
     }
 
     h1 {
         color: ${({ theme }) => theme.body.h1};
-        font-family: 'Barlow Condensed', sans-serif;
-        font-size: 3em;
+        font-family: 'Barlow', sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
         margin: 0;
     }
 
     h2 {
         color: ${({ theme }) => theme.body.h2};
-        font-size: 1.5em;
+        font-size: 1.5rem;
+        font-weight: 600;
     }
 
     h3 {
         color: ${({ theme }) => theme.body.h3};
-        font-size: 1.1em;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 0;
     }
 
-    p, ul {
-        font-size: 1em;
+    h4 {
+        color: ${({ theme }) => theme.body.h4};
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+
+    p, ul > li {
+        margin: 0.5rem 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 1rem;
     }
 `;
 
-export const App = styled.div``;
+export const App = styled.div`
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'body sidebar'
+    'body sidebar'
+    'body sidebar'
+    'footer footer';
+  grid-template-columns: 70% 30%;
+  grid-template-rows: repeat(4, auto);
+`;
 
 export const Header = styled.header`
+  background-color: ${({ theme }) =>
+    theme.header.background};
+  color: ${({ theme }) => theme.header.paragraph};
   font-size: 2rem;
+  grid-area: header;
+  padding: ${bodyPadding};
+
+  h1 {
+    color: ${({ theme }) =>
+    theme.header.h1};
+  }
 
   .byline {
     font-size: 1rem;
@@ -50,7 +93,18 @@ export const Header = styled.header`
 `;
 
 export const Main = styled.main`
-  font-size: 2rem;
+  font-size: 3rem;
+  grid-area: body;
+  box-sizing: border-box;
+  padding: ${bodyPadding};
 `;
 
-export const Footer = styled.footer``;
+export const Sidebar = styled.aside`
+  grid-area: sidebar;
+  padding: ${bodyPadding};
+`;
+
+export const Footer = styled.footer`
+  grid-area: footer;
+  padding: ${bodyPadding};
+`;
