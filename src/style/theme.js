@@ -7,8 +7,8 @@ const theme = {
             background: colors.bright.gray,
             paragraph: colors.black,
             h1: colors.bright.blue,
-            h2: colors.bright.jonquil,
-            h3: colors.white,
+            h2: colors.muted.jonquil,
+            h3: colors.bright.blue,
         }
     },
     dark: {
