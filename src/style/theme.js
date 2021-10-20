@@ -22,10 +22,22 @@ const theme = {
             },
             marker: colors.bright.teal,
         },
+        button: {
+            standard: {
+                background: colors.vibrant.teal,
+                hover: {
+                    background: colors.bright.lightTeal
+                }
+            }
+        },
         header: {
             background: colors.bright.blue,
             paragraph: colors.bright.lime,
             h1: colors.bright.gray,
+        },
+        wordcloud: {
+            color1: colors.bright.teal,
+            color2: colors.bright.lightTeal,
         },
     },
     dark: {
@@ -49,8 +61,20 @@ const theme = {
             },
             marker: colors.light.lightTeal,
         },
+        button: {
+            standard: {
+                background: colors.vibrant.teal,
+                hover: {
+                    background: colors.bright.lightTeal
+                }
+            }
+        },
         header: {
             background: colors.bright.blue,
+        },
+        wordcloud: {
+            color1: colors.light.blue,
+            color2: colors.bright.lightTeal,
         },
     },
 };

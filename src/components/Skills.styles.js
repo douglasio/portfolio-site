@@ -9,6 +9,7 @@ export const Skills = styled.div`
     }
 
     h3 {
+        margin: 0.5em 0;
         text-transform: uppercase;
     }
 
@@ -26,5 +27,9 @@ export const Skills = styled.div`
                 }
             }
         }
+    }
+
+    .wordcloud {
+        transform: scale(1.2);
     }
 `;

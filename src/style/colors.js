@@ -30,6 +30,9 @@ const colors = {
 		lime: '#c5c1a9',
 		gray: '#ebeae8',
 	},
+	vibrant: {
+		teal: '#8dd4ce'
+	}
 };
 
 export default colors;

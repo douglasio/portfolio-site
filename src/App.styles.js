@@ -1,8 +1,7 @@
-import styled, {
-    createGlobalStyle,
-} from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const bodyPadding = `3rem`;
+const bodyPaddingSm = `1.5rem`;
 
 export const GlobalStyle = createGlobalStyle`
     :root, body {
@@ -10,13 +9,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body { 
-        background-color: ${({ theme }) =>
-            theme.body.background};
+        background-color: ${({ theme }) => theme.body.background};
         box-sizing: border-box;
         color: ${({ theme }) => theme.body.paragraph};
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 300;
         transition: all 200ms;
     }
 
@@ -43,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
 
     h4 {
         color: ${({ theme }) => theme.body.h4};
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         font-weight: 400;
         margin: 0;
     }
@@ -82,8 +80,7 @@ export const GlobalStyle = createGlobalStyle`
         }
 
         &:hover {
-            color: ${({ theme }) =>
-                theme.body.a.hover.text};
+            color: ${({ theme }) => theme.body.a.hover.text};
             text-decoration: underline;
 
             :before {
@@ -94,18 +91,29 @@ export const GlobalStyle = createGlobalStyle`
             }
         }
     }
+
+    button {
+        cursor: pointer;
+    }
+
+    figure {
+        margin: 0;
+        padding: 0;
+    }
 `;
 
 export const App = styled.div`
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'body sidebar'
-        'body sidebar'
-        'body sidebar'
-        'footer footer';
-    grid-template-columns: 70% 30%;
-    grid-template-rows: repeat(4, auto);
+    @media screen and (min-width: 762px) {
+        display: grid;
+        grid-template-areas:
+            'header header'
+            'body sidebar'
+            'body sidebar'
+            'body sidebar'
+            'footer footer';
+        grid-template-columns: 70% 30%;
+        grid-template-rows: repeat(4, auto);
+    }
 
     h2 {
         text-transform: capitalize;
@@ -113,33 +121,72 @@ export const App = styled.div`
 `;
 
 export const Header = styled.header`
-    background-color: ${({ theme }) =>
-        theme.header.background};
+    align-items: center;
+    background-color: ${({ theme }) => theme.header.background};
     color: ${({ theme }) => theme.header.paragraph};
     font-size: 2rem;
     grid-area: header;
-    padding: ${bodyPadding};
+    justify-content: space-between;
+    padding: ${bodyPaddingSm};
+    position: relative;
+
+    .name-lockup {
+        align-items: center;
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .avatar {
+        display: inline-block;
+        height: 5rem;
+        margin-right: 1rem;
+        width: 5rem;
+        /* vertical-align: middle; */
+
+        img {
+            border-radius: 50%;
+            height: auto;
+            object-fit: contain;
+            width: 100%;
+        }
+    }
 
     h1 {
+        display: inline-block;
         color: ${({ theme }) => theme.header.h1};
+        /* vertical-align: middle; */
     }
 
     .byline {
+        display: block;
         font-size: 1rem;
         margin: 0;
+    }
+
+    @media screen and (min-width: 762px) {
+        display: flex;
+        padding: ${bodyPadding};
     }
 `;
 
 export const Main = styled.main`
+    box-sizing: border-box;
     font-size: 3rem;
     grid-area: body;
-    box-sizing: border-box;
-    padding: ${bodyPadding};
+    padding: ${bodyPaddingSm};
+
+    @media screen and (min-width: 762px) {
+        padding: ${bodyPadding};
+    }
 `;
 
 export const Sidebar = styled.aside`
     grid-area: sidebar;
-    padding: ${bodyPadding};
+    padding: ${bodyPaddingSm};
+
+    .has-sprites {
+        margin-left: 1.5rem;
+    }
 
     ul {
         margin: 0;
@@ -171,14 +218,29 @@ export const Sidebar = styled.aside`
             transform: translateX(-1em);
 
             path {
-                fill: ${({ theme }) =>
-                    theme.body.a.hover.sprite};
+                fill: ${({ theme }) => theme.body.a.hover.sprite};
             }
+        }
+    }
+
+    span + small {
+        display: block;
+    }
+
+    @media screen and (min-width: 762px) {
+        padding: ${bodyPadding};
+
+        .has-sprites {
+            margin-left: 0;
         }
     }
 `;
 
 export const Footer = styled.footer`
     grid-area: footer;
-    padding: ${bodyPadding};
+    padding: ${bodyPaddingSm};
+
+    @media screen and (min-width: 762px) {
+        padding: ${bodyPadding};
+    }
 `;
