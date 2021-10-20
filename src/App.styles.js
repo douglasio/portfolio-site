@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 const bodyPadding = `3rem`;
 const bodyPaddingSm = `1.5rem`;
+const bodyPaddingLg = `10rem`;
 
 export const GlobalStyle = createGlobalStyle`
     :root, body {
@@ -23,11 +24,13 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Barlow', sans-serif;
         font-size: 3rem;
         font-weight: 700;
+        line-height: 3rem;
         margin: 0;
     }
 
     h2 {
-        color: ${({ theme }) => theme.body.h2};
+        background-color: ${({ theme }) => theme.body.h2.background};
+        color: ${({ theme }) => theme.body.h2.text};
         font-size: 1.5rem;
         font-weight: 600;
     }
@@ -52,6 +55,7 @@ export const GlobalStyle = createGlobalStyle`
 
     p, ul > li {
         margin: 0.5rem 0;
+        z-index: 1;
     }
 
     ul {
@@ -64,6 +68,7 @@ export const GlobalStyle = createGlobalStyle`
         display: inline-block;
         position: relative;
         text-decoration: none;
+        z-index: 1;
 
         :before {
             content: "";
@@ -81,6 +86,7 @@ export const GlobalStyle = createGlobalStyle`
 
         &:hover {
             color: ${({ theme }) => theme.body.a.hover.text};
+            mix-blend-mode: ${({ theme }) => theme.body.a.hover.blend};
             text-decoration: underline;
 
             :before {
@@ -108,15 +114,49 @@ export const App = styled.div`
         grid-template-areas:
             'header header'
             'body sidebar'
-            'body sidebar'
-            'body sidebar'
-            'footer footer';
+            'footer footer'
+            'subfooter subfooter';
         grid-template-columns: 70% 30%;
         grid-template-rows: repeat(4, auto);
     }
 
     h2 {
         text-transform: capitalize;
+    }
+
+    ul.has-sprites,
+    ul.no-bullets {
+        padding-left: 0;
+
+        > li {
+            list-style-type: none;
+        }
+    }
+
+    .sprite {
+        align-items: center;
+        display: inline-flex;
+        position: relative;
+
+        > svg {
+            position: absolute;
+            left: -1.25em;
+            width: 1em;
+            transform: translateX(0);
+            transition: transform 200ms;
+
+            path {
+                fill: ${({ theme }) => theme.body.a.sprite};
+            }
+        }
+    }
+
+    a.sprite:hover > svg {
+        transform: translateX(-1em);
+
+        path {
+            fill: ${({ theme }) => theme.body.a.hover.sprite};
+        }
     }
 `;
 
@@ -127,34 +167,28 @@ export const Header = styled.header`
     font-size: 2rem;
     grid-area: header;
     justify-content: space-between;
-    padding: ${bodyPaddingSm};
     position: relative;
 
-    .name-lockup {
-        align-items: center;
+    .lockup {
+        align-items: flex-start;
         display: flex;
-        white-space: nowrap;
+        padding: 0 ${bodyPaddingSm} ${bodyPaddingSm};
     }
 
-    .avatar {
-        display: inline-block;
-        height: 5rem;
-        margin-right: 1rem;
-        width: 5rem;
-        /* vertical-align: middle; */
+    .utility {
+        align-items: right;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 ${bodyPaddingSm} 1rem;
+    }
 
-        img {
-            border-radius: 50%;
-            height: auto;
-            object-fit: contain;
-            width: 100%;
-        }
+    .text {
+        display: inline-block;
     }
 
     h1 {
         display: inline-block;
         color: ${({ theme }) => theme.header.h1};
-        /* vertical-align: middle; */
     }
 
     .byline {
@@ -164,8 +198,19 @@ export const Header = styled.header`
     }
 
     @media screen and (min-width: 762px) {
-        display: flex;
-        padding: ${bodyPadding};
+        .lockup {
+            padding: 1rem ${bodyPadding} ${bodyPadding};
+        }
+
+        .utility {
+            margin: 0 ${bodyPadding};
+        }
+    }
+
+    @media screen and (min-width: 2000px) {
+        .lockup {
+            padding: 3rem ${bodyPaddingLg};
+        }
     }
 `;
 
@@ -175,8 +220,29 @@ export const Main = styled.main`
     grid-area: body;
     padding: ${bodyPaddingSm};
 
+    h2 {
+        background-color: ${({ theme }) => theme.main.h2.background};
+        padding: 1rem;
+        padding-left: ${bodyPaddingSm};
+        margin: 0 -${bodyPaddingSm} 1rem -${bodyPaddingSm};
+    }
+
     @media screen and (min-width: 762px) {
         padding: ${bodyPadding};
+
+        h2 {
+            padding-left: ${bodyPadding};
+            margin: 0 -${bodyPadding} 1rem -${bodyPadding};
+        }
+    }
+
+    @media screen and (min-width: 2000px) {
+        padding: ${bodyPadding} ${bodyPaddingLg};
+
+        h2 {
+            padding-left: ${bodyPaddingLg};
+            margin: 0 -${bodyPaddingLg} 1rem -${bodyPaddingLg};
+        }
     }
 `;
 
@@ -184,8 +250,9 @@ export const Sidebar = styled.aside`
     grid-area: sidebar;
     padding: ${bodyPaddingSm};
 
-    .has-sprites {
-        margin-left: 1.5rem;
+    .contact-section {
+        background-color: ${({ theme }) => theme.body.backgroundAlt};
+        padding: 0.5rem 3rem 2rem;
     }
 
     ul {
@@ -201,46 +268,76 @@ export const Sidebar = styled.aside`
         }
     }
 
-    a {
-        .sprite {
-            position: absolute;
-            left: -1.5em;
-            width: 1em;
-            transform: translateX(0);
-            transition: transform 200ms;
-
-            path {
-                fill: ${({ theme }) => theme.body.a.sprite};
-            }
-        }
-
-        &:hover .sprite {
-            transform: translateX(-1em);
-
-            path {
-                fill: ${({ theme }) => theme.body.a.hover.sprite};
-            }
-        }
-    }
-
     span + small {
         display: block;
     }
 
     @media screen and (min-width: 762px) {
         padding: ${bodyPadding};
+    }
 
-        .has-sprites {
-            margin-left: 0;
-        }
+    @media screen and (min-width: 2000px) {
+        padding: ${bodyPadding} ${bodyPaddingLg};
     }
 `;
 
 export const Footer = styled.footer`
+    align-items: flex-start;
+    background-color: ${({ theme }) => theme.footer.background};
     grid-area: footer;
     padding: ${bodyPaddingSm};
 
+    > *:not(:last-child) {
+        margin-bottom: 2rem;
+        margin-right: 4rem;
+    }
+
+    .lockup {
+        align-items: center;
+        display: flex;
+    }
+
+    h1 {
+        color: ${({ theme }) => theme.footer.h1.text};
+        display: flex;
+        white-space: pre-line;
+        width: 10rem;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .contact-section ul {
+        margin-left: 1.5rem;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+
     @media screen and (min-width: 762px) {
+        display: flex;
         padding: ${bodyPadding};
+    }
+
+    @media screen and (min-width: 2000px) {
+        padding: ${bodyPadding} ${bodyPaddingLg};
+    }
+`;
+
+export const SubFooter = styled.footer`
+    color: ${({ theme }) => theme.body.muted};
+    font-size: 0.8em;
+    grid-area: subfooter;
+    background-color: ${({ theme }) => theme.footer.background};
+    padding: ${bodyPaddingSm};
+
+    @media screen and (min-width: 762px) {
+        padding: 1rem ${bodyPadding};
+    }
+
+    @media screen and (min-width: 2000px) {
+        padding: 1rem ${bodyPaddingLg};
     }
 `;

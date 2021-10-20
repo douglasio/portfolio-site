@@ -1,3 +1,5 @@
+import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Styled from './Job.styles';
 
 const Job = ({ details }) => {
@@ -18,7 +20,7 @@ const Job = ({ details }) => {
 
   return (
     <Styled.Job>
-      <h3>{title}</h3>
+      <h3 className="sprite"><FontAwesomeIcon icon={faCodeBranch} />{title}</h3>
       <h4>
         {company && company}
         {location && `, ${location}`}

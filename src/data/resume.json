@@ -70,10 +70,16 @@
     "contact": {
         "title": "contact",
         "items": {
-            "phone": "(508) 685-6041",
-            "email": "douglasio711@gmail.com",
-            "linkedin": "linkedin.com/in/douglasio",
-            "github": "https://github.com/douglasio"
+            "phone": { "name": "(508) 685-6041", "value": "(508) 685-6041" },
+            "email": { "name": "douglasio711@gmail.com", "value": "douglasio711@gmail.com" },
+            "linkedin": {
+                "name": "LinkedIn",
+                "value": "linkedin.com/in/douglasio"
+            },
+            "github": {
+                "name": "GitHub",
+                "value": "https://github.com/douglasio"
+            }
         }
     },
     "skills": {

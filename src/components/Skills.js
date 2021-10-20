@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useCookies } from 'react-cookie';
 import { useTheme } from 'styled-components';
 import { default as WordCloud } from 'react-wordcloud';
-import colors from '../style/colors';
-// import theme from '../style/theme';
 import * as Styled from './Skills.styles';
 import Button from './Button';
 import { BUTTON } from '../constants';
@@ -12,14 +11,31 @@ const VIEWS = {
     LIST: 'list',
 };
 
+const skillsViewCookie = 'skillsView';
+
 const Skills = ({ items, title }) => {
     const [view, setView] = useState(VIEWS.CLOUD);
+    const [cookie, setCookie] = useCookies([skillsViewCookie]);
     const theme = useTheme();
 
     const handleSkillsToggle = () => {
+        setCookie(
+            skillsViewCookie,
+            view === VIEWS.CLOUD ? VIEWS.LIST : VIEWS.CLOUD
+        );
+
         return view === VIEWS.CLOUD
             ? setView(VIEWS.LIST)
             : setView(VIEWS.CLOUD);
+    };
+
+    const getView = () => {
+        if (cookie[skillsViewCookie]) {
+            return cookie[skillsViewCookie];
+        } else {
+            //default
+            return VIEWS.CLOUD;
+        }
     };
 
     const parseWords = (words) => {
@@ -32,6 +48,10 @@ const Skills = ({ items, title }) => {
 
     const words = parseWords(items);
 
+    useEffect(() => {
+        setView(getView());
+    }, []);
+
     return (
         <Styled.Skills>
             <h2>
@@ -40,12 +60,11 @@ const Skills = ({ items, title }) => {
                     className="toggle"
                     onClick={handleSkillsToggle}
                     size={BUTTON.SIZE.SMALL}
-                    variant={BUTTON.VARIANT.TOGGLE}
-                >
+                    variant={BUTTON.VARIANT.TOGGLE}>
                     switch to {view}
                 </Button>
             </h2>
-            {view !== VIEWS.CLOUD ? (
+            {view === VIEWS.CLOUD ? (
                 <WordCloud
                     callbacks={{
                         getWordColor: (word) =>
@@ -68,18 +87,10 @@ const Skills = ({ items, title }) => {
                     <h3>code</h3>
                     <ul>
                         {items
-                            .filter(
-                                ({ type }) =>
-                                    type === 'code'
-                            )
+                            .filter(({ type }) => type === 'code')
                             .map(({ name, type }, i) => {
                                 return (
-                                    <li
-                                        key={`${name.substring(
-                                            0,
-                                            3
-                                        )}${i}`}
-                                    >
+                                    <li key={`${name.substring(0, 3)}${i}`}>
                                         {name}
                                     </li>
                                 );
@@ -88,18 +99,10 @@ const Skills = ({ items, title }) => {
                     <h3>Software</h3>
                     <ul>
                         {items
-                            .filter(
-                                ({ type }) =>
-                                    type === 'software'
-                            )
+                            .filter(({ type }) => type === 'software')
                             .map(({ name, type }, i) => {
                                 return (
-                                    <li
-                                        key={`${name.substring(
-                                            0,
-                                            3
-                                        )}${i}`}
-                                    >
+                                    <li key={`${name.substring(0, 3)}${i}`}>
                                         {name}
                                     </li>
                                 );

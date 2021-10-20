@@ -11,7 +11,7 @@ const colors = {
 	},
 	dark: {
 		blue: '#0d192b',
-		teal: '#335550',
+		teal: '#4e5873',
 		lightTeal: '#446664',
 		lime: '#7c8252',
 		gray: '#878b8c',
@@ -24,14 +24,16 @@ const colors = {
 		gray: '#f8f8f8',
 	},
 	muted: {
-		blue: '#3d3b41',
+		blue: '#111f35',
 		teal: '#7c837e',
 		lightTeal: '#98a09c',
 		lime: '#c5c1a9',
-		gray: '#ebeae8',
+		gray: '#f2f2f1',
 	},
 	vibrant: {
-		teal: '#8dd4ce'
+		blue: '#005fa3',
+		teal: '#8dd4ce',
+		lightTeal: '#a7d5f7'
 	}
 };
 

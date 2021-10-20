@@ -1,8 +1,9 @@
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CookiesProvider } from 'react-cookie';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from 'styled-components';
 import * as Styled from './App.styles.js';
+import Avatar from './components/Avatar';
 import Job from './components/Job';
 import Skills from './components/Skills';
 import resume from './data/resume.json';
@@ -10,10 +11,16 @@ import useSelectedTheme from './hooks/useSelectedTheme';
 import Button from './components/Button.js';
 import { BUTTON } from './constants/index.js';
 import Contact from './components/Contact.js';
-import dougImg from './assets/doug.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
+import pdf from './assets/Resume - 2021-10 - Doug Odell.pdf';
 
-function App() {
+const App = () => {
+    const [mobileView, setMobileView] = useState(false);
     const { selectedTheme, toggleSelectedTheme } = useSelectedTheme();
+
+    const mql = window.matchMedia('(max-width: 762px)');
+
     const {
         name,
         byline,
@@ -23,6 +30,23 @@ function App() {
         certifications,
         education,
     } = resume;
+
+    const handlePDFButton = () => {
+      return window.open(pdf);
+    }
+
+    useEffect(() => {
+        mql.matches ? setMobileView(true) : setMobileView(false);
+
+        mql.addEventListener('change', (e) => {
+            e.matches ? setMobileView(true) : setMobileView(false);
+        });
+        return () => {
+            mql.removeEventListener('change', (e) => {
+                return false;
+            });
+        };
+    }, [mql]);
 
     return (
         <CookiesProvider>
@@ -39,26 +63,22 @@ function App() {
                         <Styled.App>
                             <Styled.GlobalStyle />
                             <Styled.Header>
-                                <div className="column1">
-                                    <div className="name-lockup">
-                                        <figure className="avatar">
-                                            <img
-                                                alt="Douglas standing in front of a bridge in New York"
-                                                src={dougImg}
-                                            />
-                                        </figure>
-                                        <h1>{name}</h1>
-                                    </div>
-                                    <p className="byline">{byline}</p>
-                                </div>
-                                <div className="column2">
+                                <div className="utility">
                                     <Button
                                         className="theme-toggle"
                                         onClick={toggleSelectedTheme}
-                                        size={BUTTON.SIZE.MEDIUM}
+                                        size={mobileView ? BUTTON.SIZE.SMALL : BUTTON.SIZE.MEDIUM}
                                         variant="toggle">
                                         Toggle Theme
                                     </Button>
+                                </div>
+                                <div className="lockup">
+                                    <Avatar />
+                                    <div className="text">
+                                        <h1>{name}</h1>
+                                        <p className="byline">{byline}</p>
+                                        <Contact {...contact} horizontal />
+                                    </div>
                                 </div>
                             </Styled.Header>
                             <Styled.Main>
@@ -77,10 +97,7 @@ function App() {
                                 </section>
                             </Styled.Main>
                             <Styled.Sidebar>
-                                <Contact {...contact} />
-                                <section>
-                                    <Skills {...skills} />
-                                </section>
+                                <Skills {...skills} />
                                 <section>
                                     <h2>{certifications.title}</h2>
                                     <ul>
@@ -124,13 +141,30 @@ function App() {
                                     </ul>
                                 </section>
                             </Styled.Sidebar>
-                            <Styled.Footer>Footer</Styled.Footer>
+                            <Styled.Footer>
+                                <section className="lockup">
+                                    <Avatar />
+                                    <h1>{name}</h1>
+                                </section>
+                                <Contact {...contact} />
+                                <section>
+                                  <h2>this website</h2>
+                                  <ul className="has-sprites">
+                                    <li>Built with <a href="">React <FontAwesomeIcon icon={faReact} /></a></li>
+                                    <li>Hosted on Netlify</li>
+                                    <li><Button download="Resume" onClick={handlePDFButton} size={BUTTON.SIZE.LARGE}>Download PDF Version</Button></li>
+                                  </ul>
+                                </section>
+                            </Styled.Footer>
+                            <Styled.SubFooter>
+                              &copy; 2021 Douglas Odell
+                            </Styled.SubFooter>
                         </Styled.App>
                     </ThemeProvider>
                 )}
             </HelmetProvider>
         </CookiesProvider>
     );
-}
+};
 
 export default App;

@@ -5,6 +5,7 @@ import * as Styled from './Button.styles';
 const Button = ({
     children,
     className,
+    download,
     onClick,
     size,
     variant,
@@ -21,6 +22,7 @@ const Button = ({
     return (
         <Styled.Button
             className={`${className}${animate ? ' toggle-active' : ''}`}
+            download={download}
             onAnimationEnd={() => setAnimate(null)}
             onClick={(e) => handleClick(onClick, variant)}
             size={size}
