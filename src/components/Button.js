@@ -13,7 +13,6 @@ const Button = ({
     const [animate, setAnimate] = useState();
 
     const handleClick = (onClick, variant) => {
-        console.log(variant)
         variant === BUTTON.VARIANT.TOGGLE &&
             setAnimate(variant);
         return onClick();

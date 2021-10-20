@@ -10,13 +10,10 @@ export const Button = styled.button`
         switch (size) {
             case BUTTON.SIZE.SMALL:
                 return `0.6rem`;
-                break;
             case BUTTON.SIZE.MEDIUM:
                 return `0.8rem`;
-                break;
             case BUTTON.SIZE.LARGE:
                 return `1rem`;
-                break;
             default:
                 break;
         }

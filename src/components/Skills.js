@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 import { useTheme } from 'styled-components';
 import { default as WordCloud } from 'react-wordcloud';
@@ -29,14 +29,14 @@ const Skills = ({ items, title }) => {
             : setView(VIEWS.CLOUD);
     };
 
-    const getView = () => {
+    const getView = useCallback(() => {
         if (cookie[skillsViewCookie]) {
             return cookie[skillsViewCookie];
         } else {
             //default
             return VIEWS.CLOUD;
         }
-    };
+    }, [cookie]);
 
     const parseWords = (words) => {
         return words.map(({ name, type }, i) => ({
@@ -50,7 +50,7 @@ const Skills = ({ items, title }) => {
 
     useEffect(() => {
         setView(getView());
-    }, []);
+    }, [getView]);
 
     return (
         <Styled.Skills>

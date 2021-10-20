@@ -32,8 +32,8 @@ const App = () => {
     } = resume;
 
     const handlePDFButton = () => {
-      return window.open(pdf);
-    }
+        return window.open(pdf);
+    };
 
     useEffect(() => {
         mql.matches ? setMobileView(true) : setMobileView(false);
@@ -57,6 +57,11 @@ const App = () => {
                         rel="canonical"
                         href="https://douglas-odell.netlify.app/"
                     />
+                    <meta name="theme-color" content={selectedTheme.header.background} />
+                    <meta
+                        name="description"
+                        content="Douglas is a user experience-driven front-end web developer, technology strategist, and team leader"
+                    />
                 </Helmet>
                 {selectedTheme && (
                     <ThemeProvider theme={selectedTheme}>
@@ -67,7 +72,11 @@ const App = () => {
                                     <Button
                                         className="theme-toggle"
                                         onClick={toggleSelectedTheme}
-                                        size={mobileView ? BUTTON.SIZE.SMALL : BUTTON.SIZE.MEDIUM}
+                                        size={
+                                            mobileView
+                                                ? BUTTON.SIZE.SMALL
+                                                : BUTTON.SIZE.MEDIUM
+                                        }
                                         variant="toggle">
                                         Toggle Theme
                                     </Button>
@@ -148,16 +157,34 @@ const App = () => {
                                 </section>
                                 <Contact {...contact} />
                                 <section>
-                                  <h2>this website</h2>
-                                  <ul className="has-sprites">
-                                    <li>Built with <a href="">React <FontAwesomeIcon icon={faReact} /></a></li>
-                                    <li>Hosted on Netlify</li>
-                                    <li><Button download="Resume" onClick={handlePDFButton} size={BUTTON.SIZE.LARGE}>Download PDF Version</Button></li>
-                                  </ul>
+                                    <h2>this website</h2>
+                                    <ul className="has-sprites">
+                                        <li>
+                                            Built with{' '}
+                                            <a
+                                                href="https://reactjs.org/"
+                                                rel="noreferrer"
+                                                target="_blank">
+                                                React{' '}
+                                                <FontAwesomeIcon
+                                                    icon={faReact}
+                                                />
+                                            </a>
+                                        </li>
+                                        <li>Hosted on Netlify</li>
+                                        <li>
+                                            <Button
+                                                download="Resume"
+                                                onClick={handlePDFButton}
+                                                size={BUTTON.SIZE.LARGE}>
+                                                Download PDF Version
+                                            </Button>
+                                        </li>
+                                    </ul>
                                 </section>
                             </Styled.Footer>
                             <Styled.SubFooter>
-                              &copy; 2021 Douglas Odell
+                                &copy; 2021 Douglas Odell
                             </Styled.SubFooter>
                         </Styled.App>
                     </ThemeProvider>

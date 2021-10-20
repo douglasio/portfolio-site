@@ -4,10 +4,10 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import * as Styled from './Contact.styles';
 
 const Contact = ({ items, title, horizontal }) => {
-    const _component = horizontal ? Styled.ContactHorizontal : Styled.Contact;
+    const COMPONENT = horizontal ? Styled.ContactHorizontal : Styled.Contact;
 
     return (
-        <_component className="contact-section">
+        <COMPONENT className="contact-section">
             {!horizontal && <h2>{title}</h2>}
             <ul className="has-sprites">
                 <li>
@@ -31,6 +31,7 @@ const Contact = ({ items, title, horizontal }) => {
                     <a
                         className="sprite"
                         href={items.linkedin.value}
+                        rel="noreferrer"
                         target="_blank">
                         <FontAwesomeIcon icon={faLinkedin} />
                         {items.linkedin.name}
@@ -40,13 +41,14 @@ const Contact = ({ items, title, horizontal }) => {
                     <a
                         className="sprite"
                         href={items.github.value}
+                        rel="noreferrer"
                         target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
                         {items.github.name}
                     </a>
                 </li>
             </ul>
-        </_component>
+        </COMPONENT>
     );
 };
 
