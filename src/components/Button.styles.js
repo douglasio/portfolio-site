@@ -4,6 +4,7 @@ import { BUTTON } from '../constants';
 export const Button = styled.button`
     background-color: ${({ theme }) => theme.button.standard.background};
     border: 0;
+    color: ${({ theme }) => theme.button.standard.text};
     cursor: pointer;
     font-family: 'Barlow', sans-serif;
     font-size: ${({ size }) => {

@@ -27,6 +27,7 @@ const theme = {
         },
         button: {
             standard: {
+                text: colors.black,
                 background: colors.vibrant.teal,
                 hover: {
                     background: colors.bright.lightTeal,
@@ -82,6 +83,7 @@ const theme = {
         },
         button: {
             standard: {
+                text: colors.black,
                 background: colors.vibrant.teal,
                 hover: {
                     background: colors.bright.lightTeal,

@@ -171,7 +171,7 @@ const App = () => {
                                                 />
                                             </a>
                                         </li>
-                                        <li>Hosted on Netlify</li>
+                                        <li>Hosted with Netlify</li>
                                         <li>
                                             <Button
                                                 download="Resume"
