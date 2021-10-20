@@ -57,7 +57,7 @@ const App = () => {
                         rel="canonical"
                         href="https://douglas-odell.netlify.app/"
                     />
-                    <meta name="theme-color" content={selectedTheme.header.background} />
+                    {selectedTheme && <meta name="theme-color" content={selectedTheme.header.background} />}
                     <meta
                         name="description"
                         content="Douglas is a user experience-driven front-end web developer, technology strategist, and team leader"
