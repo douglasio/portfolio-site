@@ -1,149 +1,235 @@
 {
-  "name": "Douglas Odell",
-  "byline": "User experience-driven front-end web developer, technology strategist, and team leader",
-  "experience": {
-    "professional": {
-      "id": "ep",
-      "title": "Professional Experience",
-      "entries": [
-        {
-          "id": "ep001",
-          "title": "Front End Application Developer",
-          "company": "Commonwealth Financial Network",
-          "location": "Waltham, MA",
-          "startDate": "2021-10-19",
-          "endDate": null,
-          "accomplishments": [
-            "Developed intuitive, responsive, and maintainable web apps using modern JavaScript libraries and coding practices in an Agile/SCRUM environment",
-            "Created shared React component library for front-end assets to enable UI consistency across various apps and websites",
-            "Migrated corporate website from legacy .NET app to CMS-supported prospecting tool using Contentful, Netlify, and GatsbyJS",
-            "Implemented closed-loop analytics between custom web apps and Hubspot properties using Google Analytics and Hubspot CRM",
-            "Contributed to design and development of networking app for financial professionals to connect based on common interests using React",
-            "Enhanced user experience for CMS platforms including Contentful, OpenText WMS, and SharePoint Online"
-          ]
-        },
-        {
-          "id": "ep002",
-          "title": "Freelance Web Developer/Designer",
-          "company": null,
-          "location": null,
-          "startDate": "2013-01-01",
-          "endDate": null,
-          "accomplishments": [
-            "Designed and developed CMS-supported brochure websites for small businesses using Wordpress, Wix, and Squarespace",
-            "Consulted on user experience, design, and implementation for small business websites"
-          ]
-        },
-        {
-          "id": "ep003",
-          "title": "Supervisor, Web Services & Usability",
-          "company": "Commonwealth Financial Network",
-          "location": "Waltham, MA",
-          "startDate": "2016-08-19",
-          "endDate": "2019-08-19",
-          "accomplishments": [
-            "Led website development and maintenance strategy for client portal, employee intranet, and corporate website",
-            "Managed, mentored, hired, and professionally supported team of front-end developers",
-            "Supported team through corporate restructuring, rebuilding the team while ensuring ongoing support of websites and applications",
-            "Coordinated work for a high-volume Kanban queue and long-term Agile/SCRUM project pipeline",
-            "Consulted on UX for intranet and HRIS replacement projects"
-          ]
-        },
-        {
-          "id": "ep004",
-          "title": "Web Production Specialist",
-          "company": "Commonwealth Financial Network",
-          "location": "Waltham, MA",
-          "startDate": "2013-08-19",
-          "endDate": "2016-08-19",
-          "accomplishments": [
-            "Administered content updates for client portal, employee intranet, employee directory and corporate website",
-            "Provided indispensable customer service to internal clients through a high-volume web request queue (ServiceNow)",
-            "Collaborated with business to find creative solutions to improve website engagement, incorporating UX and development best practices",
-            "Migrated frequently-updated static websites into CMS to enable self-serve maintenance for content authors",
-            "Developed front-end interfaces for web tools and applications with usability and coding best practices"
-          ]
+    "name": "Douglas Odell",
+    "byline": "User experience-driven front-end web developer, technology strategist, and team leader",
+    "experience": {
+        "professional": {
+            "id": "ep",
+            "title": "Professional Experience",
+            "entries": [
+                {
+                    "id": "ep001",
+                    "title": "Front End Application Developer",
+                    "company": "Commonwealth Financial Network",
+                    "location": "Waltham, MA",
+                    "startDate": "2021-10-19",
+                    "endDate": null,
+                    "accomplishments": [
+                        "Developed intuitive, responsive, and maintainable web apps using modern JavaScript libraries and coding practices in an Agile/SCRUM environment",
+                        "Created shared React component library for front-end assets to enable UI consistency across various apps and websites",
+                        "Migrated corporate website from legacy .NET app to CMS-supported prospecting tool using Contentful, Netlify, and GatsbyJS",
+                        "Implemented closed-loop analytics between custom web apps and Hubspot properties using Google Analytics and Hubspot CRM",
+                        "Contributed to design and development of networking app for financial professionals to connect based on common interests using React",
+                        "Enhanced user experience for CMS platforms including Contentful, OpenText WMS, and SharePoint Online"
+                    ]
+                },
+                {
+                    "id": "ep002",
+                    "title": "Freelance Web Developer/Designer",
+                    "company": null,
+                    "location": null,
+                    "startDate": "2013-01-01",
+                    "endDate": null,
+                    "accomplishments": [
+                        "Designed and developed CMS-supported brochure websites for small businesses using Wordpress, Wix, and Squarespace",
+                        "Consulted on user experience, design, and implementation for small business websites"
+                    ]
+                },
+                {
+                    "id": "ep003",
+                    "title": "Supervisor, Web Services & Usability",
+                    "company": "Commonwealth Financial Network",
+                    "location": "Waltham, MA",
+                    "startDate": "2016-08-19",
+                    "endDate": "2019-08-19",
+                    "accomplishments": [
+                        "Led website development and maintenance strategy for client portal, employee intranet, and corporate website",
+                        "Managed, mentored, hired, and professionally supported team of front-end developers",
+                        "Supported team through corporate restructuring, rebuilding the team while ensuring ongoing support of websites and applications",
+                        "Coordinated work for a high-volume Kanban queue and long-term Agile/SCRUM project pipeline",
+                        "Consulted on UX for intranet and HRIS replacement projects"
+                    ]
+                },
+                {
+                    "id": "ep004",
+                    "title": "Web Production Specialist",
+                    "company": "Commonwealth Financial Network",
+                    "location": "Waltham, MA",
+                    "startDate": "2013-08-19",
+                    "endDate": "2016-08-19",
+                    "accomplishments": [
+                        "Administered content updates for client portal, employee intranet, employee directory and corporate website",
+                        "Provided indispensable customer service to internal clients through a high-volume web request queue (ServiceNow)",
+                        "Collaborated with business to find creative solutions to improve website engagement, incorporating UX and development best practices",
+                        "Migrated frequently-updated static websites into CMS to enable self-serve maintenance for content authors",
+                        "Developed front-end interfaces for web tools and applications with usability and coding best practices"
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  },
-  "contact": {
-    "title": "contact",
-    "items": {
-      "phone": "(508) 685-6041",
-      "email": "douglasio711@gmail.com",
-      "linkedin": "linkedin.com/in/douglasio",
-      "github": "https://github.com/douglasio"
-    }
-  },
-  "skills": {
-    "title": "skills",
-    "code": {
-      "title": "code",
-      "items": [
-        "JavaScript (ES6)",
-        "TypeScript",
-        "React",
-        "jQuery",
-        "REST",
-        "CSS3/SCSS/Sass",
-        "Bootstrap",
-        "HTML5",
-        "GatsbyJS",
-        "GraphQL",
-        "Vue.js",
-        "C#",
-        "Angular",
-        "PHP"
-      ]
     },
-    "software": {
-      "title": "software",
-      "items": [
-        "Visual Studio",
-        "Google Analytics",
-        "Git",
-        "Postman",
-        "Adobe XD",
-        "Axure",
-        "Figma",
-        "Contentful",
-        "Cvent",
-        "Hubspot",
-        "ServiceNow",
-        "Jira",
-        "OpenText WMS",
-        "Wordpress",
-        "Wix"
-      ]
+    "contact": {
+        "title": "contact",
+        "items": {
+            "phone": "(508) 685-6041",
+            "email": "douglasio711@gmail.com",
+            "linkedin": "linkedin.com/in/douglasio",
+            "github": "https://github.com/douglasio"
+        }
+    },
+    "skills": {
+        "title": "skills",
+        "items": [
+            {
+                "name": "JavaScript (ES6)",
+                "type": "code"
+            },
+            {
+                "name": "Visual Studio",
+                "type": "software"
+            },
+            {
+                "name": "TypeScript",
+                "type": "code"
+            },
+            {
+                "name": "Google Analytics",
+                "type": "software"
+            },
+            {
+                "name": "React",
+                "type": "code"
+            },
+            {
+                "name": "Git",
+                "type": "software"
+            },
+            {
+                "name": "jQuery",
+                "type": "code"
+            },
+
+            {
+                "name": "Postman",
+                "type": "software"
+            },
+            {
+                "name": "REST",
+                "type": "code"
+            },
+            {
+                "name": "Adobe XD",
+                "type": "software"
+            },
+            {
+                "name": "CSS3/SCSS/Sass",
+                "type": "code"
+            },
+
+            {
+                "name": "Axure",
+                "type": "software"
+            },
+            {
+                "name": "Bootstrap",
+                "type": "code"
+            },
+            {
+                "name": "Figma",
+                "type": "software"
+            },
+            {
+                "name": "HTML5",
+                "type": "code"
+            },
+            {
+                "name": "Contentful",
+                "type": "software"
+            },
+
+            {
+                "name": "GatsbyJS",
+                "type": "code"
+            },
+            {
+                "name": "Cvent",
+                "type": "software"
+            },
+
+            {
+                "name": "GraphQL",
+                "type": "code"
+            },
+
+            {
+                "name": "Hubspot",
+                "type": "software"
+            },
+            {
+                "name": "Vue.js",
+                "type": "code"
+            },
+            {
+                "name": "ServiceNow",
+                "type": "software"
+            },
+            {
+                "name": "C#",
+                "type": "code"
+            },
+            {
+                "name": "Jira",
+                "type": "software"
+            },
+
+            {
+                "name": "Angular",
+                "type": "code"
+            },
+            {
+                "name": "OpenText WMS",
+                "type": "software"
+            },
+            {
+                "name": "PHP",
+                "type": "code"
+            },
+            {
+                "name": "Wordpress",
+                "type": "software"
+            },
+
+            {
+                "name": "Wix",
+                "type": "software"
+            }
+        ]
+    },
+    "certifications": {
+        "title": "certifications",
+        "items": [
+            {
+                "title": "Certified ScrumMaster (CSM)",
+                "institution": "Scrum, Inc."
+            },
+            {
+                "title": "Certified Usability Analyst (CUA)",
+                "institution": "Human Factors International"
+            },
+            {
+                "title": "8-Week Dale Carnegie Course",
+                "institution": "Dale Carnegie Institute"
+            }
+        ]
+    },
+    "education": {
+        "title": "education",
+        "items": [
+            {
+                "title": "Bachelor of Science, Geography",
+                "institution": "Boston University",
+                "location": "Boston, MA",
+                "years": "2009–2013"
+            }
+        ]
     }
-  },
-  "certifications": {
-    "title": "certifications",
-    "items": [
-      {
-        "title": "Certified ScrumMaster (CSM)",
-        "institution": "Scrum, Inc."
-      },
-      {
-        "title": "Certified Usability Analyst (CUA)",
-        "institution": "Human Factors International"
-      },
-      {
-        "title": "8-Week Dale Carnegie Course",
-        "institution": "Dale Carnegie Institute"
-      }
-    ]
-  },
-  "education": {
-    "title": "education",
-    "items": [
-      {
-        "title": "Bachelor of Science, Geography",
-        "institution": "Boston University",
-        "location": "Boston, MA",
-        "years": "2009–2013"
-      }
-    ]
-  }
 }
