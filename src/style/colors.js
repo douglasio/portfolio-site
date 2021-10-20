@@ -1,6 +1,7 @@
 const colors = {
 	white: '#fff',
 	black: '#000',
+    transparent: 'transparent',
 	bright: {
 		blue: '#2a3449',
 		teal: '#5e8e85',
