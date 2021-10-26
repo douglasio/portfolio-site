@@ -4,111 +4,111 @@ const theme = {
     light: {
         id: 't01',
         body: {
-            background: colors.light.gray,
-            backgroundAlt: colors.light.lightTeal,
+            background: colors.light.ghost,
+            backgroundAlt: colors.light.mist,
             paragraph: colors.black,
-            muted: colors.muted.teal,
-            h1: colors.bright.blue,
-            h2: { text: colors.bright.lightTeal, background: colors.transparent },
-            h3: colors.bright.teal,
-            h4: colors.bright.blue,
+            muted: colors.muted.fog,
+            h1: colors.bright.midnight,
+            h2: { text: colors.bright.mist, background: colors.transparent },
+            h3: colors.bright.fog,
+            h4: colors.bright.midnight,
             a: {
                 background: colors.transparent,
-                sprite: colors.bright.teal,
-                text: colors.bright.blue,
+                sprite: colors.bright.fog,
+                text: colors.bright.midnight,
                 hover: {
-                    background: colors.bright.lightTeal,
+                    background: colors.bright.mist,
                     blend: 'multiply',
                     sprite: colors.bright.white,
                     text: colors.white,
                 },
             },
-            marker: colors.bright.teal,
+            marker: colors.bright.fog,
         },
         button: {
             standard: {
                 text: colors.black,
-                background: colors.vibrant.teal,
+                background: colors.vibrant.fog,
                 hover: {
-                    background: colors.bright.lightTeal,
+                    background: colors.bright.mist,
                 },
             },
             secondary: {
-                background: colors.light.teal,
+                background: colors.light.fog,
                 hover: {
-                    background: colors.muted.lightTeal,
+                    background: colors.muted.mist,
                 },
             }
         },
         header: {
-            background: colors.vibrant.lightTeal,
-            paragraph: colors.vibrant.gray,
+            background: colors.vibrant.mist,
+            paragraph: colors.vibrant.ghost,
             h1: colors.white,
         },
         main: {
-            h2: { text: colors.bright.lightTeal, background: colors.muted.gray },
+            h2: { text: colors.bright.mist, background: colors.muted.ghost },
         },
         footer: {
-            background: colors.muted.gray,
-            h1: { text: colors.bright.lightTeal }
+            background: colors.muted.ghost,
+            h1: { text: colors.bright.mist }
         },
         wordcloud: {
-            color1: colors.bright.teal,
-            color2: colors.bright.lightTeal,
+            color1: colors.bright.fog,
+            color2: colors.bright.mist,
         },
     },
     dark: {
         id: 't02',
         body: {
-            background: colors.dark.blue,
-            backgroundAlt: colors.dark.teal,
+            background: colors.dark.midnight,
+            backgroundAlt: colors.dark.fog,
             paragraph: colors.white,
-            muted: colors.muted.lightTeal,
-            h1: colors.bright.lime,
-            h2: { text: colors.light.teal, background: colors.transparent },
-            h3: colors.light.teal,
-            h4: colors.light.lightTeal,
+            muted: colors.muted.mist,
+            h1: colors.bright.hazmat,
+            h2: { text: colors.light.fog, background: colors.transparent },
+            h3: colors.light.fog,
+            h4: colors.light.mist,
             a: {
                 background: colors.transparent,
-                sprite: colors.light.blue,
-                text: colors.bright.lime,
+                sprite: colors.light.midnight,
+                text: colors.bright.hazmat,
                 hover: {
-                    background: colors.bright.lime,
+                    background: colors.bright.hazmat,
                     blend: 'difference',
-                    sprite: colors.bright.lime,
-                    text: colors.bright.blue,
+                    sprite: colors.bright.hazmat,
+                    text: colors.bright.midnight,
                 },
             },
-            marker: colors.light.lightTeal,
+            marker: colors.light.mist,
         },
         button: {
             standard: {
                 text: colors.black,
-                background: colors.vibrant.teal,
+                background: colors.vibrant.fog,
                 hover: {
-                    background: colors.bright.lightTeal,
+                    background: colors.bright.mist,
                 },
             },
             secondary: {
-                background: colors.bright.lightTeal,
+                background: colors.bright.mist,
                 hover: {
-                    background: colors.dark.lightTeal,
+                    background: colors.dark.mist,
                 },
             }
         },
         header: {
-            background: colors.bright.blue,
+            background: colors.bright.midnight,
         },
         main: {
-            h2: { text: colors.bright.lightTeal, background: colors.muted.blue },
+            h2: { text: colors.bright.mist, background: colors.muted.midnight },
         },
         footer: {
-            background: colors.bright.blue,
-            h1: { text: colors.bright.lightTeal }
+            background: colors.bright.midnight,
+            h1: { text: colors.bright.mist }
         },
         wordcloud: {
-            color1: colors.light.blue,
-            color2: colors.bright.lightTeal,
+            color1: colors.light.midnight,
+            color2: colors.bright.mist,
         },
     },
 };

@@ -57,7 +57,12 @@ const App = () => {
                         rel="canonical"
                         href="https://douglas-odell.netlify.app/"
                     />
-                    {selectedTheme && <meta name="theme-color" content={selectedTheme.header.background} />}
+                    {selectedTheme && (
+                        <meta
+                            name="theme-color"
+                            content={selectedTheme.header.background}
+                        />
+                    )}
                     <meta
                         name="description"
                         content="Douglas is a user experience-driven front-end web developer, technology strategist, and team leader"
@@ -160,6 +165,22 @@ const App = () => {
                                     <h2>this website</h2>
                                     <ul className="has-sprites">
                                         <li>
+                                            <a
+                                                href="https://xd.adobe.com/view/9a02cf8d-fe55-4126-9bf2-3bda833ee87b-cf51/"
+                                                target="_blank"
+                                                rel="noopener noreferrer">
+                                                Design System
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://github.com/douglasio/portfolio-site"
+                                                target="_blank"
+                                                rel="noopener noreferrer">
+                                                Source Code
+                                            </a>
+                                        </li>
+                                        <li>
                                             Built with{' '}
                                             <a
                                                 href="https://reactjs.org/"
@@ -172,12 +193,13 @@ const App = () => {
                                             </a>
                                         </li>
                                         <li>Hosted with Netlify</li>
+
                                         <li>
                                             <Button
                                                 download="Resume"
                                                 onClick={handlePDFButton}
                                                 size={BUTTON.SIZE.LARGE}>
-                                                Download PDF Version
+                                                Download Resume (PDF)
                                             </Button>
                                         </li>
                                     </ul>
