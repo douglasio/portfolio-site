@@ -38,7 +38,7 @@ const theme = {
                 hover: {
                     background: colors.muted.mist,
                 },
-            }
+            },
         },
         header: {
             background: colors.vibrant.mist,
@@ -50,7 +50,7 @@ const theme = {
         },
         footer: {
             background: colors.muted.ghost,
-            h1: { text: colors.bright.mist }
+            h1: { text: colors.bright.mist },
         },
         wordcloud: {
             color1: colors.bright.fog,
@@ -94,7 +94,7 @@ const theme = {
                 hover: {
                     background: colors.dark.mist,
                 },
-            }
+            },
         },
         header: {
             background: colors.bright.midnight,
@@ -104,7 +104,7 @@ const theme = {
         },
         footer: {
             background: colors.bright.midnight,
-            h1: { text: colors.bright.mist }
+            h1: { text: colors.bright.mist },
         },
         wordcloud: {
             color1: colors.light.midnight,
