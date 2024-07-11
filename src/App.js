@@ -13,7 +13,6 @@ import { BUTTON } from './constants/index.js';
 import Contact from './components/Contact.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
-import pdf from './assets/Resume - 2021-10 - Doug Odell.pdf';
 
 const App = () => {
     const [mobileView, setMobileView] = useState(false);
@@ -24,12 +23,19 @@ const App = () => {
     const {
         name,
         byline,
+        intro,
         experience,
         contact,
         skills,
         certifications,
         education,
     } = resume;
+
+    const currentYear = new Date().getFullYear();
+
+    const pdf = process.env.PUBLIC_URL + '/Resume_DougOdell.pdf';
+
+    console.log(pdf);
 
     const handlePDFButton = () => {
         return window.open(pdf);
@@ -96,6 +102,9 @@ const App = () => {
                                 </div>
                             </Styled.Header>
                             <Styled.Main>
+                                <section>
+                                    <p>{intro}</p>
+                                </section>
                                 <section>
                                     <h2>{experience.professional.title}</h2>
                                     {experience.professional.entries.map(
@@ -206,7 +215,7 @@ const App = () => {
                                 </section>
                             </Styled.Footer>
                             <Styled.SubFooter>
-                                &copy; 2021 Douglas Odell
+                                &copy; {currentYear} Douglas Odell
                             </Styled.SubFooter>
                         </Styled.App>
                     </ThemeProvider>
