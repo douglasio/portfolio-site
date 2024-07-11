@@ -1,7 +1,7 @@
 import * as Styled from './Avatar.styles';
 import dougImg from '../assets/doug.jpg';
 
-const Avatar = () => {
+export const Avatar = () => {
     return (
         <Styled.Avatar className="avatar">
             <img
@@ -11,5 +11,3 @@ const Avatar = () => {
         </Styled.Avatar>
     );
 };
-
-export default Avatar;

@@ -1,6 +1,7 @@
 {
     "name": "Douglas Odell",
-    "byline": "User experience-driven front-end web developer, technology strategist, and team leader",
+    "byline": "Software developer, technology strategist, and team leader",
+    "intro": "Well-rounded software developer with proficiency in React and TypeScript. 10+ years of experience as both a team leader and collaborator. Always striving to balance great UX with stakeholder needs and efficient development practices.",
     "experience": {
         "professional": {
             "id": "ep",
@@ -8,16 +9,17 @@
             "entries": [
                 {
                     "id": "ep001",
-                    "title": "Front End Application Developer",
+                    "title": "Software Developer",
                     "company": "Commonwealth Financial Network",
                     "location": "Waltham, MA",
                     "startDate": "2021-10-19",
                     "endDate": null,
                     "accomplishments": [
-                        "Developed intuitive, responsive, and maintainable web apps using modern JavaScript libraries and coding practices in an Agile/SCRUM environment",
-                        "Created shared React component library for front-end assets to enable UI consistency across various apps and websites",
-                        "Migrated corporate website from legacy .NET app to CMS-supported prospecting tool using Contentful, Netlify, and GatsbyJS",
-                        "Implemented closed-loop analytics between custom web apps and Hubspot properties using Google Analytics and Hubspot CRM",
+                        "Developed intuitive, responsive, and maintainable web apps for financial service professionals using modern JavaScript libraries (including React) in both Agile/SCRUM and Kanban environments",
+                        "Created shared React component library for UI assets across various apps and websites as part of corporate rebranding effort",
+                        "Developed a platform for web-based business intake forms with legacy system integration using React and VB.NET",
+                        "Migrated corporate website from legacy .NET app to CMS-supported site using GatsbyJS, GraphQL, Contentful, and Netlify",
+                        "Provided technical leadership to a team of front-end developers, including oversight of vendor and contractor development projects",
                         "Contributed to design and development of networking app for financial professionals to connect based on common interests using React",
                         "Enhanced user experience for CMS platforms including Contentful, OpenText WMS, and SharePoint Online"
                     ]
@@ -43,10 +45,8 @@
                     "endDate": "2019-08-19",
                     "accomplishments": [
                         "Led website development and maintenance strategy for client portal, employee intranet, and corporate website",
-                        "Managed, mentored, hired, and professionally supported team of front-end developers",
-                        "Supported team through corporate restructuring, rebuilding the team while ensuring ongoing support of websites and applications",
-                        "Coordinated work for a high-volume Kanban queue and long-term Agile/SCRUM project pipeline",
-                        "Consulted on UX for intranet and HRIS replacement projects"
+                        "Managed, mentored, hired, and professionally supported team of front-end developers of varying skill levels and experience",
+                        "Supported team through corporate restructuring, rebuilding tech organization while ensuring ongoing support of websites and applications"
                     ]
                 },
                 {
@@ -57,11 +57,8 @@
                     "startDate": "2013-08-19",
                     "endDate": "2016-08-19",
                     "accomplishments": [
-                        "Administered content updates for client portal, employee intranet, employee directory and corporate website",
-                        "Provided indispensable customer service to internal clients through a high-volume web request queue (ServiceNow)",
-                        "Collaborated with business to find creative solutions to improve website engagement, incorporating UX and development best practices",
-                        "Migrated frequently-updated static websites into CMS to enable self-serve maintenance for content authors",
-                        "Developed front-end interfaces for web tools and applications with usability and coding best practices"
+                        "Administered CMS and supported development for client portal, employee intranet, employee directory and corporate website",
+                        "Provided indispensable customer service to internal clients through a high-volume web request queue (ServiceNow)"
                     ]
                 }
             ]
@@ -70,8 +67,10 @@
     "contact": {
         "title": "contact",
         "items": {
-            "phone": { "name": "(508) 685-6041", "value": "(508) 685-6041" },
-            "email": { "name": "douglasio711@gmail.com", "value": "douglasio711@gmail.com" },
+            "email": {
+                "name": "douglasio711@gmail.com",
+                "value": "douglasio711@gmail.com"
+            },
             "linkedin": {
                 "name": "LinkedIn",
                 "value": "https://linkedin.com/in/douglasio"
@@ -86,126 +85,87 @@
         "title": "skills",
         "items": [
             {
-                "name": "JavaScript (ES6)",
+                "name": "JavaScript",
                 "type": "code"
-            },
-            {
-                "name": "Visual Studio",
-                "type": "software"
             },
             {
                 "name": "TypeScript",
                 "type": "code"
             },
             {
-                "name": "Google Analytics",
-                "type": "software"
-            },
-            {
                 "name": "React",
                 "type": "code"
             },
             {
-                "name": "Git",
-                "type": "software"
-            },
-            {
-                "name": "jQuery",
-                "type": "code"
-            },
-
-            {
-                "name": "Postman",
-                "type": "software"
-            },
-            {
-                "name": "REST",
+                "name": "NextJS",
                 "type": "code"
             },
             {
-                "name": "Adobe XD",
-                "type": "software"
-            },
-            {
-                "name": "CSS3/SCSS/Sass",
-                "type": "code"
-            },
-
-            {
-                "name": "Axure",
-                "type": "software"
-            },
-            {
-                "name": "Bootstrap",
+                "name": "GatsbyJS",
                 "type": "code"
             },
             {
-                "name": "Figma",
-                "type": "software"
+                "name": "GraphQL",
+                "type": "code"
             },
             {
-                "name": "HTML5",
+                "name": "Node.js",
+                "type": "code"
+            },
+            {
+                "name": "VB.NET",
+                "type": "code"
+            },
+            {
+                "name": "HTML/CSS/jQuery",
+                "type": "code"
+            },
+            {
+                "name": "Sass/SCSS",
+                "type": "code"
+            },
+            {
+                "name": "SQL",
                 "type": "code"
             },
             {
                 "name": "Contentful",
                 "type": "software"
             },
-
             {
-                "name": "GatsbyJS",
-                "type": "code"
-            },
-            {
-                "name": "Cvent",
+                "name": "Figma",
                 "type": "software"
-            },
-
-            {
-                "name": "GraphQL",
-                "type": "code"
-            },
-
-            {
-                "name": "Hubspot",
-                "type": "software"
-            },
-            {
-                "name": "Vue.js",
-                "type": "code"
-            },
-            {
-                "name": "ServiceNow",
-                "type": "software"
-            },
-            {
-                "name": "C#",
-                "type": "code"
-            },
-            {
-                "name": "Jira",
-                "type": "software"
-            },
-
-            {
-                "name": "Angular",
-                "type": "code"
             },
             {
                 "name": "OpenText WMS",
                 "type": "software"
             },
             {
-                "name": "PHP",
-                "type": "code"
-            },
-            {
-                "name": "Wordpress",
+                "name": "Google Analytics",
                 "type": "software"
             },
-
             {
-                "name": "Wix",
+                "name": "MuleSoft",
+                "type": "software"
+            },
+            {
+                "name": "Cvent",
+                "type": "software"
+            },
+            {
+                "name": "Hubspot",
+                "type": "software"
+            },
+            {
+                "name": "Azure",
+                "type": "software"
+            },
+            {
+                "name": "Jira/Confluence",
+                "type": "software"
+            },
+            {
+                "name": "ServiceNow",
                 "type": "software"
             }
         ]
@@ -231,7 +191,7 @@
         "title": "education",
         "items": [
             {
-                "title": "Bachelor of Science, Geography",
+                "title": "Bachelor of Science",
                 "institution": "Boston University",
                 "location": "Boston, MA",
                 "years": "2009–2013"

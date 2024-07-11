@@ -227,6 +227,10 @@ export const Main = styled.main`
         margin: 0 -${bodyPaddingSm} 1rem -${bodyPaddingSm};
     }
 
+    section + section {
+        margin-top: 2rem;
+    }
+
     @media screen and (min-width: 762px) {
         padding: ${bodyPadding};
 
