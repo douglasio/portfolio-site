@@ -1,13 +1,6 @@
-import { useTheme } from 'styled-components';
 import * as Styled from './Skills.styles';
-import Button from './Button';
-import { BUTTON } from '../constants';
 
-const skillsViewCookie = 'skillsView';
-
-const Skills = ({ items, title }) => {
-    const theme = useTheme();
-
+export const Skills = ({ items, title }) => {
     return (
         <Styled.Skills>
             <h2>{title}</h2>
@@ -16,7 +9,7 @@ const Skills = ({ items, title }) => {
             <ul>
                 {items
                     .filter(({ type }) => type === 'code')
-                    .map(({ name, type }, i) => {
+                    .map(({ name }, i) => {
                         return (
                             <li key={`${name.substring(0, 3)}${i}`}>{name}</li>
                         );
@@ -35,5 +28,3 @@ const Skills = ({ items, title }) => {
         </Styled.Skills>
     );
 };
-
-export default Skills;

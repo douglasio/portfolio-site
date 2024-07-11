@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
+
+// external
 import { CookiesProvider } from 'react-cookie';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from 'styled-components';
-import * as Styled from './App.styles.js';
-import Avatar from './components/Avatar';
-import Job from './components/Job';
-import Skills from './components/Skills';
-import resume from './data/resume.json';
-import useSelectedTheme from './hooks/useSelectedTheme';
-import Button from './components/Button.js';
-import { BUTTON } from './constants/index.js';
-import Contact from './components/Contact.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
+
+// internal
+import { useSelectedTheme } from 'hooks';
+import { Avatar, Button, Contact, Job, Skills } from 'components';
+import { resume } from 'data';
+import { BUTTON } from 'constants';
+import * as Styled from './App.styles.js';
 
 const App = () => {
     const [mobileView, setMobileView] = useState(false);

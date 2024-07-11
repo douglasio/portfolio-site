@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faAt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import * as Styled from './Contact.styles';
 
-const Contact = ({ items, title, horizontal }) => {
+export const Contact = ({ items, title, horizontal }) => {
     const COMPONENT = horizontal ? Styled.ContactHorizontal : Styled.Contact;
 
     return (
@@ -40,5 +40,3 @@ const Contact = ({ items, title, horizontal }) => {
         </COMPONENT>
     );
 };
-
-export default Contact;

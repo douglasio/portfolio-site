@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { BUTTON } from '../constants';
 import * as Styled from './Button.styles';
 
-const Button = ({
+export const Button = ({
     children,
     className,
     download,
@@ -13,8 +13,7 @@ const Button = ({
     const [animate, setAnimate] = useState();
 
     const handleClick = (onClick, variant) => {
-        variant === BUTTON.VARIANT.TOGGLE &&
-            setAnimate(variant);
+        variant === BUTTON.VARIANT.TOGGLE && setAnimate(variant);
         return onClick();
     };
 
@@ -26,11 +25,8 @@ const Button = ({
             onClick={(e) => handleClick(onClick, variant)}
             size={size}
             type="button"
-            variant={variant}
-        >
+            variant={variant}>
             {children}
         </Styled.Button>
     );
 };
-
-export default Button;
