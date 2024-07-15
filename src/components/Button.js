@@ -26,8 +26,7 @@ export const Button = ({
             onClick={(e) => handleClick(onClick, variant)}
             size={size}
             title={title}
-            type="button"
-            variant={variant}>
+            type="button">
             {children}
         </Styled.Button>
     );

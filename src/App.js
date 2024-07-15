@@ -58,20 +58,29 @@ const App = () => {
         <CookiesProvider>
             <HelmetProvider>
                 <Helmet>
-                    <title>Douglas Odell</title>
-                    <link
-                        rel="canonical"
-                        href="https://douglas-odell.netlify.app/"
+                    <title>Douglas Odell - Resume and Portfolio</title>
+                    <meta
+                        name="title"
+                        content="Douglas Odell - Resume and Portfolio"
                     />
+                    <meta name="description" content={intro} />
+                    <meta name="keywords" content="douglas odell, doug odell" />
+                    <meta name="robots" content="index, follow" />
+                    <meta
+                        http-equiv="Content-Type"
+                        content="text/html; charset=utf-8"
+                    />
+                    <meta name="language" content="English" />
+                    <meta name="author" content="Douglas Odell" />
                     {selectedTheme && (
                         <meta
                             name="theme-color"
                             content={selectedTheme.header.background}
                         />
                     )}
-                    <meta
-                        name="description"
-                        content="Douglas is a user experience-driven front-end web developer, technology strategist, and team leader"
+                    <link
+                        rel="canonical"
+                        href="https://douglas-odell.netlify.app/"
                     />
                 </Helmet>
                 {selectedTheme && (

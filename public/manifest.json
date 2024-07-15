@@ -1,6 +1,12 @@
 {
+    "name": "Douglas Odell - Resume and Portfolio",
     "short_name": "Douglas Odell",
-    "name": "Douglas Odell's Portfolio Site",
+    "theme_color": "#deffae",
+    "background_color": "#2a3449",
+    "display": "browser",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
     "icons": [
         {
             "src": "favicon.ico",
@@ -17,9 +23,5 @@
             "type": "image/png",
             "sizes": "512x512"
         }
-    ],
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#deffae",
-    "background_color": "#2a3449"
+    ]
 }
