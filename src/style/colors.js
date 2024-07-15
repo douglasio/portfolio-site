@@ -28,7 +28,7 @@ const colors = {
         fog: '#7c837e',
         mist: '#98a09c',
         hazmat: '#c5c1a9',
-        ghost: '#f2f2f1',
+        ghost: '#e9f1f7',
     },
     vibrant: {
         midnight: '#005fa3',

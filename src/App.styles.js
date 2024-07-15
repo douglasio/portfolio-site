@@ -70,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         z-index: 1;
 
-        :before {
+        &:before {
             content: "";
             background-color: transparent;
             display: block;
@@ -89,7 +89,7 @@ export const GlobalStyle = createGlobalStyle`
             mix-blend-mode: ${({ theme }) => theme.body.a.hover.blend};
             text-decoration: underline;
 
-            :before {
+            &:before {
                 background-color: ${({ theme }) =>
                     theme.body.a.hover.background};
                 display: block;
@@ -259,6 +259,13 @@ export const Sidebar = styled.aside`
         padding: 0.5rem 3rem 2rem;
     }
 
+    h2 {
+        background-color: ${({ theme }) => theme.main.h2.background};
+        padding: 1rem;
+        padding-left: ${bodyPaddingSm};
+        margin: 0 -${bodyPaddingSm} 1rem -${bodyPaddingSm};
+    }
+
     ul {
         margin: 0;
         padding: 0;
@@ -276,8 +283,22 @@ export const Sidebar = styled.aside`
         display: block;
     }
 
+    section {
+        margin-bottom: 5rem;
+    }
+
     @media screen and (min-width: 762px) {
         padding: ${bodyPadding};
+
+        h2 {
+            background-color: transparent;
+            padding: 0;
+            margin: 1.5rem 0 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
     }
 
     @media screen and (min-width: 2000px) {

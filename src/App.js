@@ -5,6 +5,7 @@ import { CookiesProvider } from 'react-cookie';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 // internal
@@ -16,7 +17,8 @@ import * as Styled from './App.styles.js';
 
 const App = () => {
     const [mobileView, setMobileView] = useState(false);
-    const { selectedTheme, toggleSelectedTheme } = useSelectedTheme();
+    const { selectedTheme, selectedThemeName, toggleSelectedTheme } =
+        useSelectedTheme();
 
     const mql = window.matchMedia('(max-width: 762px)');
 
@@ -34,8 +36,6 @@ const App = () => {
     const currentYear = new Date().getFullYear();
 
     const pdf = process.env.PUBLIC_URL + '/Resume_DougOdell.pdf';
-
-    console.log(pdf);
 
     const handlePDFButton = () => {
         return window.open(pdf);
@@ -88,8 +88,13 @@ const App = () => {
                                                 ? BUTTON.SIZE.SMALL
                                                 : BUTTON.SIZE.MEDIUM
                                         }
+                                        title="Toggle theme"
                                         variant="toggle">
-                                        Toggle Theme
+                                        {selectedThemeName === 'light' ? (
+                                            <FontAwesomeIcon icon={faSun} />
+                                        ) : (
+                                            <FontAwesomeIcon icon={faMoon} />
+                                        )}
                                     </Button>
                                 </div>
                                 <div className="lockup">

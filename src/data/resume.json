@@ -9,56 +9,57 @@
             "entries": [
                 {
                     "id": "ep001",
-                    "title": "Software Developer",
+                    "title": "Software Engineer",
                     "company": "Commonwealth Financial Network",
                     "location": "Waltham, MA",
                     "startDate": "2021-10-19",
                     "endDate": null,
                     "accomplishments": [
-                        "Developed intuitive, responsive, and maintainable web apps for financial service professionals using modern JavaScript libraries (including React) in both Agile/SCRUM and Kanban environments",
-                        "Created shared React component library for UI assets across various apps and websites as part of corporate rebranding effort",
-                        "Developed a platform for web-based business intake forms with legacy system integration using React and VB.NET",
-                        "Migrated corporate website from legacy .NET app to CMS-supported site using GatsbyJS, GraphQL, Contentful, and Netlify",
-                        "Provided technical leadership to a team of front-end developers, including oversight of vendor and contractor development projects",
-                        "Contributed to design and development of networking app for financial professionals to connect based on common interests using React",
-                        "Enhanced user experience for CMS platforms including Contentful, OpenText WMS, and SharePoint Online"
+                        "Engineered 30+ intuitive, responsive, and maintainable web apps for financial service professionals in collaboration with development team using React, JavaScript/jQuery, with .NET middleware",
+                        "Created React component library of >25 UI elements used across 10+ apps and websites as part of corporate rebranding and code modernization effort, speeding up development time and streamlining code maintenance",
+                        "Developed React, .NET, and REST API  based web form app and systems architecture to replace 185 legacy forms used by internal and external clients, reducing dependency on outdated technical stack while improving user and developer experience",
+                        "Upgraded developer-maintained corporate website to a CMS-supported Jamstack platform, using GatsbyJS, GraphQL, Contentful, and Netlify, and Google Analytics integration",
+                        "Integrated third party solutions into home-grown app ecosystem, including Google Analytics, SearchBlox, ServiceNow, and Cvent",
+                        "Developed & designed industry-award-winning networking app for financial professionals in collaboration with development team",
+                        "Improved user experience and created efficiencies in various CMS platforms, empowering content contributors to administer websites without requiring developer resources"
                     ]
                 },
                 {
                     "id": "ep002",
-                    "title": "Freelance Web Developer/Designer",
-                    "company": null,
-                    "location": null,
-                    "startDate": "2013-01-01",
-                    "endDate": null,
-                    "accomplishments": [
-                        "Designed and developed CMS-supported brochure websites for small businesses using Wordpress, Wix, and Squarespace",
-                        "Consulted on user experience, design, and implementation for small business websites"
-                    ]
-                },
-                {
-                    "id": "ep003",
-                    "title": "Supervisor, Web Services & Usability",
+                    "title": "Supervisor, Web Development & UX",
                     "company": "Commonwealth Financial Network",
                     "location": "Waltham, MA",
                     "startDate": "2016-08-19",
                     "endDate": "2019-08-19",
                     "accomplishments": [
-                        "Led website development and maintenance strategy for client portal, employee intranet, and corporate website",
-                        "Managed, mentored, hired, and professionally supported team of front-end developers of varying skill levels and experience",
-                        "Supported team through corporate restructuring, rebuilding tech organization while ensuring ongoing support of websites and applications"
+                        "Managed, mentored, hired, trained, and professionally supported team of 5-10 developers of varying skill and experience levels",
+                        "Led team through department restructuring while ensuring ongoing development and maintenance of several production apps",
+                        "Improved processes for managing development support queue, reducing manual administrative tasks by 25%",
+                        "Collaborated with cross-functional development teams as a contributor,  technical lead, and scrum master"
+                    ]
+                },
+                {
+                    "id": "ep003",
+                    "title": "Freelance Web Developer",
+                    "company": null,
+                    "location": null,
+                    "startDate": "2013-01-01",
+                    "endDate": null,
+                    "accomplishments": [
+                        "Designed and built brochure websites for small businesses using Wordpress, Wix, and Squarespace",
+                        "Consulted with small business owners on user experience, design, and implementation of their websites"
                     ]
                 },
                 {
                     "id": "ep004",
-                    "title": "Web Production Specialist",
+                    "title": "Web Developer",
                     "company": "Commonwealth Financial Network",
                     "location": "Waltham, MA",
                     "startDate": "2013-08-19",
                     "endDate": "2016-08-19",
                     "accomplishments": [
-                        "Administered CMS and supported development for client portal, employee intranet, employee directory and corporate website",
-                        "Provided indispensable customer service to internal clients through a high-volume web request queue (ServiceNow)"
+                        "Administered CMS and supported development for 10+ internal and external web apps and sites",
+                        "Provided indispensable customer service to internal clients through a high-volume web request queue"
                     ]
                 }
             ]
@@ -125,6 +126,10 @@
                 "type": "code"
             },
             {
+                "name": "CSS Frameworks (Bootstrap, Tailwind CSS, Material UI, Mantine UI)",
+                "type": "software"
+            },
+            {
                 "name": "SQL",
                 "type": "code"
             },
@@ -134,6 +139,14 @@
             },
             {
                 "name": "Figma",
+                "type": "software"
+            },
+            {
+                "name": "SearchBlox",
+                "type": "software"
+            },
+            {
+                "name": "Algolia",
                 "type": "software"
             },
             {
@@ -161,6 +174,14 @@
                 "type": "software"
             },
             {
+                "name": "Netlify",
+                "type": "software"
+            },
+            {
+                "name": "Cloudflare",
+                "type": "software"
+            },
+            {
                 "name": "Jira/Confluence",
                 "type": "software"
             },
@@ -182,7 +203,7 @@
                 "institution": "Human Factors International"
             },
             {
-                "title": "8-Week Dale Carnegie Course",
+                "title": "Dale Carnegie Training",
                 "institution": "Dale Carnegie Institute"
             }
         ]

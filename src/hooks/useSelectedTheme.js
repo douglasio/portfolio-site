@@ -43,6 +43,7 @@ const useSelectedTheme = () => {
 
     return {
         selectedTheme: theme[selectedTheme],
+        selectedThemeName: selectedTheme,
         toggleSelectedTheme: toggleSelectedTheme,
     };
 };
