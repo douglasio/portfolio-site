@@ -8,6 +8,7 @@ export const Button = ({
     download,
     onClick,
     size,
+    title,
     variant,
 }) => {
     const [animate, setAnimate] = useState();
@@ -24,8 +25,8 @@ export const Button = ({
             onAnimationEnd={() => setAnimate(null)}
             onClick={(e) => handleClick(onClick, variant)}
             size={size}
-            type="button"
-            variant={variant}>
+            title={title}
+            type="button">
             {children}
         </Styled.Button>
     );
