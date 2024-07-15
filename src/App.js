@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 // external
+import ReactGA from 'react-ga4';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,13 +12,15 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { useSelectedTheme } from 'hooks';
 import { Avatar, Button, Contact, Job, Skills } from 'components';
 import { resume } from 'data';
-import { BUTTON } from 'constants';
+import { BUTTON, GA_MEASUREMENT_ID } from 'constants';
 import * as Styled from './App.styles.js';
 
 const App = () => {
     const [mobileView, setMobileView] = useState(false);
     const { selectedTheme, selectedThemeName, toggleSelectedTheme } =
         useSelectedTheme();
+
+    ReactGA.initialize(GA_MEASUREMENT_ID);
 
     const mql = window.matchMedia('(max-width: 762px)');
 
