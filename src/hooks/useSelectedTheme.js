@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useCookies } from 'react-cookie';
 import theme from '../style/theme';
 
+const lsKey = 'theme';
+
 const useSelectedTheme = () => {
-    const [cookies, setCookie] = useCookies(['theme']);
-    const [selectedTheme, setSelectedTheme] = useState(cookies.theme);
+    const [selectedTheme, setSelectedTheme] = useState(
+        localStorage.getItem(lsKey)
+    );
 
     const THEMES = {
         LIGHT: 'light',
@@ -19,23 +21,23 @@ const useSelectedTheme = () => {
 
     const toggleSelectedTheme = () => {
         if (selectedTheme === THEMES.LIGHT) {
-            setCookie('theme', THEMES.DARK);
+            localStorage.setItem(lsKey, THEMES.DARK);
             setSelectedTheme(THEMES.DARK);
         } else {
-            setCookie('theme', THEMES.LIGHT);
+            localStorage.setItem(lsKey, THEMES.LIGHT);
             setSelectedTheme(THEMES.LIGHT);
         }
     };
 
     const getTheme = useCallback(() => {
-        if (cookies.theme) {
-            return cookies.theme;
+        if (localStorage.getItem(lsKey)) {
+            return localStorage.getItem(lsKey);
         } else if (userPrefers) {
             return userPrefers;
         } else {
             return 'light';
         }
-    }, [cookies, userPrefers]);
+    }, [userPrefers]);
 
     useEffect(() => {
         setSelectedTheme(getTheme());
