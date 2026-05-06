@@ -128,7 +128,25 @@ const App = () => {
                         </Styled.Header>
                         <Styled.Main>
                             <section>
-                                <p>{intro}</p>
+                                <p>
+                                    Senior frontend-leaning engineer with 10+
+                                    years of experience building complex,
+                                    interactive web applications in React and
+                                    TypeScript (or whatever the situation calls
+                                    for).
+                                </p>
+                                <p>
+                                    Being a well-rounded technologist goes
+                                    beyond solving LeetCode problems. It&rsquo;s
+                                    depth of experience in the industry
+                                    that&rsquo;s taught me skills like how get
+                                    alignment from PMs trying to get their
+                                    features delivered, how to accommodate
+                                    designers who want the UI pixel-perfect, and
+                                    how to best collaborate with other
+                                    engineering teams with a dozen competing
+                                    priorities to create great outcomes.
+                                </p>
                             </section>
                             <section>
                                 <h2>{experience.professional.title}</h2>
