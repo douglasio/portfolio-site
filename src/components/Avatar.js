@@ -1,5 +1,5 @@
 import * as Styled from './Avatar.styles';
-import dougImg from '../assets/doug.jpg';
+import dougImg from '../assets/doug_headshot_2025.jpg';
 
 export const Avatar = () => {
     return (
