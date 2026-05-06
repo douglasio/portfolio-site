@@ -106,6 +106,16 @@ const App = () => {
                                         <FontAwesomeIcon icon={faMoon} />
                                     )}
                                 </Button>
+                                <Button
+                                    download="Resume"
+                                    onClick={handlePDFButton}
+                                    size={
+                                        mobileView
+                                            ? BUTTON.SIZE.SMALL
+                                            : BUTTON.SIZE.MEDIUM
+                                    }>
+                                    Download Resume (PDF)
+                                </Button>
                             </div>
                             <div className="lockup">
                                 <Avatar />

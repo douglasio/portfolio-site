@@ -178,6 +178,7 @@ export const Header = styled.header`
     .utility {
         align-items: right;
         display: flex;
+        gap: 1rem;
         justify-content: flex-end;
         margin: 0 ${bodyPaddingSm} 1rem;
     }
