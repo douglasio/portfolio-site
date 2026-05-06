@@ -1,7 +1,6 @@
 {
     "name": "Douglas Odell",
-    "byline": "Software developer, technology strategist, and team leader",
-    "intro": "Well-rounded software developer with proficiency in React and TypeScript. 10+ years of experience as both a team leader and collaborator. Always striving to balance great UX with stakeholder needs and efficient development practices.",
+    "byline": "Software engineer, technology strategist, and team leader",
     "experience": {
         "professional": {
             "id": "ep",
@@ -11,55 +10,54 @@
                     "id": "ep001",
                     "title": "Software Engineer",
                     "company": "Commonwealth Financial Network",
-                    "location": "Waltham, MA",
+                    "location": "Waltham, MA → San Diego, CA",
                     "startDate": "2021-10-19",
                     "endDate": null,
                     "accomplishments": [
-                        "Engineered 30+ intuitive, responsive, and maintainable web apps for financial service professionals in collaboration with development team using React, JavaScript/jQuery, with .NET middleware",
-                        "Created React component library of >25 UI elements used across 10+ apps and websites as part of corporate rebranding and code modernization effort, speeding up development time and streamlining code maintenance",
-                        "Developed React, .NET, and REST API  based web form app and systems architecture to replace 185 legacy forms used by internal and external clients, reducing dependency on outdated technical stack while improving user and developer experience",
-                        "Upgraded developer-maintained corporate website to a CMS-supported Jamstack platform, using GatsbyJS, GraphQL, Contentful, and Netlify, and Google Analytics integration",
-                        "Integrated third party solutions into home-grown app ecosystem, including Google Analytics, SearchBlox, ServiceNow, and Cvent",
-                        "Developed & designed industry-award-winning networking app for financial professionals in collaboration with development team",
-                        "Improved user experience and created efficiencies in various CMS platforms, empowering content contributors to administer websites without requiring developer resources"
+                        "Built and maintained 10+ full-stack web applications for financial professionals using React, TypeScript, and JavaScript, with C#/.NET middleware and SQL, collaborating with PM, design, and backend teams to deliver features from ideation through launch.",
+                        "Architected a 35+ component React UI library adopted across 10+ applications, improving consistency, accelerating development velocity, and shaping frontend standards across the org.",
+                        "Designed and implemented an in-house secure site search system (React + .NET Core + Postgres + AWS), reducing reliance on third-party vendors and cutting operational costs.",
+                        "Led the migration of 185 legacy web forms to React with REST API integrations, eliminating major tech debt and improving maintainability. ",
+                        "Delivered Jamstack migrations for 3 public websites (Gatsby + GraphQL + Contentful + Netlify), improving performance and enabling non-technical content management. ",
+                        "Integrated third-party systems (Google Analytics, SearchBlox, ServiceNow, Cvent) into a home‑grown ecosystem to improve analytics, search, and content workflows. ",
+                        "Served as repository code owner, conducting code reviews and driving engineering quality through change-management processes."
                     ]
                 },
                 {
                     "id": "ep002",
-                    "title": "Supervisor, Web Development & UX",
+                    "title": "Manager, Web Development & UX",
                     "company": "Commonwealth Financial Network",
                     "location": "Waltham, MA",
                     "startDate": "2016-08-19",
                     "endDate": "2019-08-19",
                     "accomplishments": [
-                        "Managed, mentored, hired, trained, and professionally supported team of 5-10 developers of varying skill and experience levels",
-                        "Led team through department restructuring while ensuring ongoing development and maintenance of several production apps",
-                        "Improved processes for managing development support queue, reducing manual administrative tasks by 25%",
-                        "Collaborated with cross-functional development teams as a contributor,  technical lead, and scrum master"
-                    ]
-                },
-                {
-                    "id": "ep003",
-                    "title": "Freelance Web Developer",
-                    "company": null,
-                    "location": null,
-                    "startDate": "2013-01-01",
-                    "endDate": null,
-                    "accomplishments": [
-                        "Designed and built brochure websites for small businesses using Wordpress, Wix, and Squarespace",
-                        "Consulted with small business owners on user experience, design, and implementation of their websites"
+                        "Managed, mentored, hired, and technically supported a team of 5–10 engineers across varying skill levels.",
+                        "Collaborated across functions as contributor, technical lead, and scrum master, bridging designers, PMs, and backend engineers.",
+                        "Improved the development support queue process, reducing manual administrative overhead by 25%."
                     ]
                 },
                 {
                     "id": "ep004",
-                    "title": "Web Developer",
+                    "title": "Front End Application Developer",
                     "company": "Commonwealth Financial Network",
                     "location": "Waltham, MA",
                     "startDate": "2013-08-19",
                     "endDate": "2016-08-19",
                     "accomplishments": [
-                        "Administered CMS and supported development for 10+ internal and external web apps and sites",
-                        "Provided indispensable customer service to internal clients through a high-volume web request queue"
+                        "Supported and enhanced 10+ internal and external web applications, contributing to UI development, content management, and iterative improvements.",
+                        "Provided indispensable customer service to internal clients through a high-volume web request queue."
+                    ]
+                },
+                {
+                    "id": "ep003",
+                    "title": "Web Designer & Developer",
+                    "company": "Freelance",
+                    "location": "Remote",
+                    "startDate": "2013-01-01",
+                    "endDate": null,
+                    "accomplishments": [
+                        "Designed and built client websites using WordPress, Wix, and Squarespace; consulted on UX, design, and implementation for small business owners.",
+                        "Designed and developed custom wedding websites using NextJS, MantineUI, Hubspot integration, hosted on Cloudflare"
                     ]
                 }
             ]
@@ -114,6 +112,10 @@
                 "type": "code"
             },
             {
+                "name": ".NET Core",
+                "type": "code"
+            },
+            {
                 "name": "VB.NET",
                 "type": "code"
             },
@@ -126,8 +128,12 @@
                 "type": "code"
             },
             {
-                "name": "CSS Frameworks (Bootstrap, Tailwind CSS, Material UI, Mantine UI)",
+                "name": "AWS",
                 "type": "software"
+            },
+            {
+                "name": "CSS Frameworks (Bootstrap, Tailwind CSS, Material UI, Mantine UI)",
+                "type": "code"
             },
             {
                 "name": "SQL",
@@ -188,6 +194,11 @@
             {
                 "name": "ServiceNow",
                 "type": "software"
+            },
+
+            {
+                "name": "GitHub Copilot / AI-Assisted Development",
+                "type": "software"
             }
         ]
     },
@@ -203,7 +214,7 @@
                 "institution": "Human Factors International"
             },
             {
-                "title": "Dale Carnegie Training",
+                "title": "Dale Carnegie Program",
                 "institution": "Dale Carnegie Institute"
             }
         ]

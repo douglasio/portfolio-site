@@ -24,7 +24,7 @@ export const Job = ({ details }) => {
             </h3>
             <h4>
                 {company && company}
-                {location && `, ${location}`}
+                {location && ` | ${location}`}
                 {startYear && (company || location) && ` | `}
                 {startYear && `${startYear}—${endYear}`}
             </h4>
